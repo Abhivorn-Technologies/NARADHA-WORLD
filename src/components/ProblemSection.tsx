@@ -20,7 +20,7 @@ const problems = [
 ];
 
 const ProblemSection = () => (
-  <section className="section-padding relative">
+  <section className="section-padding relative section-warm">
     <div className="container">
       <SectionHeading
         eyebrow="The Problem"
@@ -31,8 +31,8 @@ const ProblemSection = () => (
       <div className="grid md:grid-cols-3 gap-6">
         {problems.map((p, i) => (
           <AnimatedSection key={p.title} delay={i * 0.15}>
-            <div className="glass-card p-8 h-full group hover:border-primary/20 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mb-5">
+            <div className="glass-card p-8 h-full group hover:border-destructive/20">
+              <div className="w-12 h-12 rounded-xl bg-destructive/8 flex items-center justify-center mb-5 group-hover:bg-destructive/12 transition-colors duration-300">
                 <p.icon className="text-destructive" size={22} />
               </div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-3">{p.title}</h3>

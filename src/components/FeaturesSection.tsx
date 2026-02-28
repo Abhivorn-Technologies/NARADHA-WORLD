@@ -11,7 +11,7 @@ const features = [
 ];
 
 const FeaturesSection = () => (
-  <section id="features" className="section-padding relative">
+  <section id="features" className="section-padding relative section-warm">
     <div className="container">
       <SectionHeading
         eyebrow="Features"
@@ -22,9 +22,9 @@ const FeaturesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((f, i) => (
           <AnimatedSection key={f.title} delay={i * 0.1}>
-            <div className="glass-card p-7 h-full group hover:border-accent/20 transition-all duration-300">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                <f.icon className="text-accent" size={20} />
+            <div className="glass-card p-7 h-full group hover:border-primary/20">
+              <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors duration-300">
+                <f.icon className="text-primary" size={20} />
               </div>
               <h3 className="text-lg font-display font-semibold text-foreground mb-2">{f.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>

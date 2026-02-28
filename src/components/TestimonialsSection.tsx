@@ -20,7 +20,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="section-padding">
+  <section className="section-padding section-warm">
     <div className="container">
       <SectionHeading
         eyebrow="Testimonials"
@@ -33,7 +33,7 @@ const TestimonialsSection = () => (
             <div className="glass-card p-7 h-full">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={14} className="text-accent fill-accent" />
+                  <Star key={j} size={14} className="text-primary fill-primary" />
                 ))}
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">"{t.quote}"</p>

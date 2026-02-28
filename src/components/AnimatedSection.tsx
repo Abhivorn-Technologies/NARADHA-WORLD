@@ -28,7 +28,7 @@ export const AnimatedSection = ({ children, className = "", delay = 0 }: Animate
 export const SectionHeading = ({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) => (
   <div className="text-center max-w-3xl mx-auto mb-16">
     <AnimatedSection>
-      <span className="inline-block text-sm font-semibold tracking-widest uppercase gradient-text mb-4">
+      <span className="inline-block text-sm font-semibold tracking-[0.2em] uppercase gradient-text mb-4">
         {eyebrow}
       </span>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-5 leading-tight">
@@ -37,6 +37,7 @@ export const SectionHeading = ({ eyebrow, title, description }: { eyebrow: strin
       {description && (
         <p className="text-muted-foreground text-lg leading-relaxed">{description}</p>
       )}
+      <div className="ornamental-divider max-w-xs mx-auto mt-8" />
     </AnimatedSection>
   </div>
 );

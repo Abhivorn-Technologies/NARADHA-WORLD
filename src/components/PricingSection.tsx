@@ -30,7 +30,7 @@ const plans = [
 
 const PricingSection = () => (
   <section id="pricing" className="section-padding relative">
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
+    <div className="absolute inset-0 section-saffron-mist" />
     <div className="container relative">
       <SectionHeading
         eyebrow="Pricing"
@@ -44,11 +44,11 @@ const PricingSection = () => (
             <div className={`rounded-2xl p-8 h-full flex flex-col transition-all duration-500 ${
               plan.highlighted
                 ? "glass-card glow-orange border-primary/30 relative"
-                : "glass-card hover:border-border/80"
+                : "glass-card"
             }`}>
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="btn-gradient text-primary-foreground text-xs font-semibold px-4 py-1 rounded-full">
+                  <span className="btn-gradient text-primary-foreground text-xs font-semibold px-4 py-1 rounded-full shadow-md">
                     Most Popular
                   </span>
                 </div>
@@ -62,16 +62,16 @@ const PricingSection = () => (
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Check size={16} className="text-accent flex-shrink-0" />
+                    <Check size={16} className="text-primary flex-shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
               <a
                 href="#cta"
-                className={`flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                className={`flex items-center justify-center gap-2 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                   plan.highlighted
-                    ? "btn-gradient text-primary-foreground"
+                    ? "btn-gradient text-primary-foreground shadow-md"
                     : "border border-border text-foreground hover:bg-secondary"
                 }`}
               >

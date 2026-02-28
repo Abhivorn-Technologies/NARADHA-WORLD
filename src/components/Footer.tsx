@@ -43,7 +43,8 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className="border-t border-border/50 pt-6 text-center">
+      <div className="ornamental-divider mb-6" />
+      <div className="text-center">
         <p className="text-xs text-muted-foreground">© 2026 Naradha World. All rights reserved.</p>
       </div>
     </div>

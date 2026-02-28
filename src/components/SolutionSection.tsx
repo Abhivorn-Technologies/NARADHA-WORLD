@@ -10,7 +10,7 @@ const solutions = [
 
 const SolutionSection = () => (
   <section className="section-padding relative">
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
+    <div className="absolute inset-0 section-saffron-mist" />
     <div className="container relative">
       <SectionHeading
         eyebrow="The Solution"
@@ -21,7 +21,7 @@ const SolutionSection = () => (
       <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {solutions.map((s, i) => (
           <AnimatedSection key={s.title} delay={i * 0.12}>
-            <div className="glass-card p-8 h-full group hover:glow-orange transition-all duration-500">
+            <div className="glass-card p-8 h-full group hover:glow-orange">
               <div className="w-12 h-12 rounded-xl btn-gradient flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <s.icon className="text-primary-foreground" size={22} />
               </div>

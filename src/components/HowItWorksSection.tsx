@@ -26,7 +26,7 @@ const HowItWorksSection = () => (
           {steps.map((s, i) => (
             <AnimatedSection key={s.title} delay={i * 0.12} className="text-center">
               <div className="relative">
-                <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center mx-auto mb-4 glow-purple">
+                <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center mx-auto mb-4 glow-orange">
                   <s.icon className="text-accent" size={22} />
                 </div>
                 <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full btn-gradient text-primary-foreground text-xs font-bold flex items-center justify-center">

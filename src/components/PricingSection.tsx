@@ -43,7 +43,7 @@ const PricingSection = () => (
           <AnimatedSection key={plan.name} delay={i * 0.15}>
             <div className={`rounded-2xl p-8 h-full flex flex-col transition-all duration-500 ${
               plan.highlighted
-                ? "glass-card glow-purple border-primary/30 relative"
+                ? "glass-card glow-orange border-primary/30 relative"
                 : "glass-card hover:border-border/80"
             }`}>
               {plan.highlighted && (

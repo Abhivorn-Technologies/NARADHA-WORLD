@@ -21,7 +21,7 @@ const UseCaseSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {useCases.map((u, i) => (
           <AnimatedSection key={u.title} delay={i * 0.1}>
-            <div className="glass-card p-7 h-full group hover:border-primary/20 transition-all duration-300 hover:glow-cyan">
+            <div className="glass-card p-7 h-full group hover:border-primary/20 transition-all duration-300 hover:glow-amber">
               <u.icon className="text-accent mb-4" size={28} />
               <h3 className="font-display font-semibold text-foreground mb-2">{u.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{u.description}</p>

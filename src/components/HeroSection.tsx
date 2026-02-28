@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background glow */}
       <div className="absolute inset-0 hero-glow" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] animate-pulse-glow" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.06] blur-[120px] animate-pulse-glow" />
       
       <div className="container relative z-10 text-center py-20 md:py-32">
         <motion.div

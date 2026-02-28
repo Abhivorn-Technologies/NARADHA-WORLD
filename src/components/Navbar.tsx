@@ -13,7 +13,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/70 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-xl">
       <div className="container flex items-center justify-between h-16 md:h-18">
         <a href="#" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg btn-gradient flex items-center justify-center">
@@ -53,7 +53,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="md:hidden bg-background/98 backdrop-blur-xl border-b border-border"
           >
             <div className="container py-4 flex flex-col gap-3">
               {navLinks.map((l) => (

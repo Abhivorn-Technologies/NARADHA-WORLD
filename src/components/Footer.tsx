@@ -1,54 +1,50 @@
-import { Linkedin, MessageCircle } from "lucide-react";
+import Link from "next/link";
+import { legalLinks, nav, site } from "@/lib/site";
+import CookieSettingsLink from "./CookieSettingsLink";
+import Logo from "./Logo";
 
-const Footer = () => (
-  <footer className="border-t border-border/50 py-12">
-    <div className="container">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-        <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-7 h-7 rounded-lg btn-gradient flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xs">N</span>
-            </div>
-            <span className="font-display font-bold text-foreground">Naradha World</span>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            AI-powered voice and WhatsApp automation for modern enterprises.
+export default function Footer() {
+  const c = site.company;
+  return (
+    <footer className="bg-ink text-white">
+      <div className="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="max-w-sm space-y-4">
+          <Logo inverted />
+          <p className="text-[15px] leading-relaxed text-white/70">
+            WhatsApp replies, guided flows and Telugu AI calls that answer every lead and book the visit.
           </p>
+          {(c.supportEmail || c.phone) && (
+            <ul className="space-y-1 text-[15px] text-white/80">
+              {c.supportEmail && <li><a className="hover:text-white" href={`mailto:${c.supportEmail}`}>{c.supportEmail}</a></li>}
+              {c.phone && <li><a className="hover:text-white" href={`tel:${c.phone.replace(/\s/g, "")}`}>{c.phone}</a></li>}
+            </ul>
+          )}
         </div>
-        <div>
-          <h4 className="font-display font-semibold text-foreground mb-4 text-sm">Product</h4>
-          <ul className="space-y-2.5">
-            {["Features", "Pricing", "Use Cases", "How It Works"].map((l) => (
-              <li key={l}><a href={`#${l.toLowerCase().replace(/ /g, "-")}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l}</a></li>
+        <nav aria-label="Footer">
+          <h2 className="mb-3 text-sm font-semibold text-white/60">Company</h2>
+          <ul className="space-y-2 text-[15px]">
+            <li><Link className="text-white/85 hover:text-white" href="/">Home</Link></li>
+            {nav.map((n) => (
+              <li key={n.href}><Link className="text-white/85 hover:text-white" href={n.href}>{n.label}</Link></li>
             ))}
           </ul>
-        </div>
-        <div>
-          <h4 className="font-display font-semibold text-foreground mb-4 text-sm">Company</h4>
-          <ul className="space-y-2.5">
-            {["About", "Contact", "Privacy Policy", "Terms of Service"].map((l) => (
-              <li key={l}><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l}</a></li>
+        </nav>
+        <nav aria-label="Legal">
+          <h2 className="mb-3 text-sm font-semibold text-white/60">Legal</h2>
+          <ul className="space-y-2 text-[15px]">
+            {legalLinks.map((n) => (
+              <li key={n.href}><Link className="text-white/85 hover:text-white" href={n.href}>{n.label}</Link></li>
             ))}
+            <li><CookieSettingsLink /></li>
           </ul>
-        </div>
-        <div>
-          <h4 className="font-display font-semibold text-foreground mb-4 text-sm">Connect</h4>
-          <div className="flex gap-3">
-            <a href="#" className="w-9 h-9 rounded-lg glass-card flex items-center justify-center hover:bg-secondary transition-colors">
-              <Linkedin size={16} className="text-muted-foreground" />
-            </a>
-            <a href="#" className="w-9 h-9 rounded-lg glass-card flex items-center justify-center hover:bg-secondary transition-colors">
-              <MessageCircle size={16} className="text-muted-foreground" />
-            </a>
-          </div>
+        </nav>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="container-x flex flex-col gap-2 py-5 text-sm text-white/55 sm:flex-row sm:justify-between">
+          <p>© {new Date().getFullYear()} {c.legalName}. {site.name} is a product of {c.legalName}.</p>
+          {c.gstin && <p>GSTIN {c.gstin}</p>}
         </div>
       </div>
-      <div className="ornamental-divider mb-6" />
-      <div className="text-center">
-        <p className="text-xs text-muted-foreground">© 2026 Naradha World. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-);
-
-export default Footer;
+    </footer>
+  );
+}

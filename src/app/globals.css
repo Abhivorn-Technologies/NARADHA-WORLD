@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Naradha World: ink blue text on white, saffron for the voice wave and key actions, peacock teal for WhatsApp.
+   Layout: wide sections with a 1120px reading grid; cool mist bands separate sections instead of cards. */
+@theme {
+  --color-ink: #13202f;
+  --color-ink-2: #3c4a5c;
+  --color-muted: #5a6779;
+  --color-line: #e1e6ed;
+  --color-mist: #f3f6f9;
+  --color-paper: #ffffff;
+  --color-saffron: #d97706;
+  --color-saffron-ink: #a24e05;
+  --color-saffron-soft: #fdf1e2;
+  --color-peacock: #0e6470;
+  --color-peacock-soft: #e5f3f4;
+  --color-danger: #b42318;
+  --font-display: var(--font-bricolage), "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-manrope), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-telugu: var(--font-telugu), "Noto Sans Telugu", "Nirmala UI", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; letter-spacing: -0.015em; }
+p { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 2px; }
+::selection { background: var(--color-saffron-soft); }
+
+.container-x { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; padding: 11px 18px; font-weight: 600; font-size: 15px; line-height: 1.2; transition: background-color .15s, border-color .15s, color .15s; }
+.btn-primary { background: var(--color-ink); color: #fff; }
+.btn-primary:hover { background: #22344a; }
+.btn-secondary { border: 1px solid var(--color-line); color: var(--color-ink); background: #fff; }
+.btn-secondary:hover { border-color: #c3ccd7; background: var(--color-mist); }
+
+.eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--color-saffron-ink); }
+
+/* Long-form legal text */
+.prose-legal { max-width: 72ch; color: var(--color-ink-2); line-height: 1.75; font-size: 16px; }
+.prose-legal h2 { color: var(--color-ink); font-size: 22px; margin: 40px 0 10px; scroll-margin-top: 96px; }
+.prose-legal h3 { color: var(--color-ink); font-size: 17px; margin: 24px 0 6px; }
+.prose-legal p, .prose-legal ul, .prose-legal ol { margin: 10px 0; }
+.prose-legal ul { list-style: disc; padding-left: 22px; }
+.prose-legal ol { list-style: decimal; padding-left: 22px; }
+.prose-legal li { margin: 4px 0; }
+.prose-legal a { color: var(--color-saffron-ink); text-decoration: underline; text-underline-offset: 3px; }
+.prose-legal table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 12px 0; }
+.prose-legal th, .prose-legal td { text-align: left; border-bottom: 1px solid var(--color-line); padding: 8px 10px 8px 0; vertical-align: top; }
+.prose-legal th { color: var(--color-ink); font-weight: 600; }
+.todo { background: #fff4d6; color: #7a4b00; border-radius: 4px; padding: 0 5px; font-weight: 600; }

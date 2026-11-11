@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# Naradha World website
 
-## Project info
+Marketing website for Naradha World (WhatsApp, AI agent and Telugu AI calls for every lead).
+Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · zod.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Develop
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+cp .env.example .env.local
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Checks
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Configuration
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Variable | Where | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | public | Canonical URLs, sitemap, social previews. Set to the production domain (https). |
+| `NEXT_PUBLIC_APP_URL` | public, optional | App address; shows "Sign in" and "Start free trial" links. |
+| `LEAD_CAPTURE_URL` | server only | Agent CRM lead capture link. Demo requests are posted here and become leads. |
 
-## What technologies are used for this project?
+Business details (legal name, address, GSTIN, emails, Grievance Officer) live in `src/lib/site.ts`.
+Plans and usage prices live in `src/lib/pricing.ts` and must match the app's billing plans.
 
-This project is built with:
+## Pages
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Home, Product, Pricing, About, Contact (demo form), Privacy Policy, Terms of Service, Cookie Policy,
+Refund & Cancellation, Service Delivery, Acceptable Use, 404. Plus `sitemap.xml`, `robots.txt`, web manifest,
+favicon, Apple touch icon and a generated Open Graph image.
 
-## How can I deploy this project?
+## Brand
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- Mark: `public/brand/naradha-world-mark.svg` (dark-on-light) and `naradha-world-mark-white.svg` (for dark backgrounds).
+- Full logo images: `public/brand/naradha-world-logo.png` and `naradha-world-logo-white.png`.
+- Colours: ink `#13202f`, saffron `#d97706`, peacock `#0e6470`. Fonts: Bricolage Grotesque (headings), Manrope (text).
 
-## Can I connect a custom domain to my Lovable project?
+## Launch checklist
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Fill every `null` in `src/lib/site.ts` (the legal pages show highlighted "to be added" notes until then) and confirm
+   the legal name, city and the refund terms.
+2. Have the legal pages reviewed by a lawyer.
+3. Set `NEXT_PUBLIC_SITE_URL`, `LEAD_CAPTURE_URL` (and `NEXT_PUBLIC_APP_URL` when the app is live).
+4. Deploy (Vercel or `npm run build && npm start` behind HTTPS), point the domain, and check `/sitemap.xml`.
+5. Submit the domain to Google Search Console.

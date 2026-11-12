@@ -12,7 +12,7 @@ export const site = {
   appUrl: (process.env.NEXT_PUBLIC_APP_URL || "").replace(/\/$/, ""),
 
   company: {
-    legalName: "Abhivorn Technologies" as string, // confirm the exact registered name (e.g. "… Private Limited")
+    legalName: "Abhivorn Technologies" as string, // owner of Naradha World; add "Private Limited" etc. if registered that way
     registeredAddress: null as string | null,
     city: "Hyderabad, Telangana, India" as string | null, // confirm
     gstin: null as string | null,

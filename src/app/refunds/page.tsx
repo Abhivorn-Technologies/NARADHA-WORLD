@@ -8,7 +8,7 @@ export default function RefundsPage() {
   return (
     <LegalPage
       title="Refund and Cancellation Policy"
-      intro={<p>This policy covers {site.name} plan subscriptions and wallet top-ups paid through Razorpay.</p>}
+      intro={<p>This policy covers {site.name} plan subscriptions and wallet top-ups paid through Razorpay. Payments are received and refunds are issued by {site.company.legalName}, the company that owns and operates {site.name}.</p>}
       sections={[
         { id: "trial", title: "1. Free trial", body: <p>The free trial is not charged. If you don&apos;t choose a plan, nothing is billed when it ends.</p> },
         { id: "cancel", title: "2. Cancelling a plan", body: <ul>

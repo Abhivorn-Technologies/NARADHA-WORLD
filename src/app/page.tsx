@@ -66,6 +66,8 @@ export default function Home() {
           description: site.description,
           url: site.url,
           publisher: { "@type": "Organization", name: site.company.legalName },
+          creator: { "@type": "Organization", name: site.company.legalName },
+          brand: { "@type": "Brand", name: site.name },
           offers: plans.filter((p) => p.monthly).map((p) => ({ "@type": "Offer", name: p.name, price: p.monthly, priceCurrency: "INR" })),
         }}
       />

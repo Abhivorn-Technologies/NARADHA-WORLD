@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      intro={<p>This policy explains how {c.legalName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) handles personal data when you visit this website, request a demo, use {site.name} as a customer, or are a lead of a business that uses {site.name}. It is written to meet the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000 and its rules.</p>}
+      intro={<p>{site.name} is a product of {c.legalName}, which develops, operates and maintains it. This policy explains how {c.legalName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) handles personal data when you visit this website, request a demo, use {site.name} as a customer, or are a lead of a business that uses {site.name}. It is written to meet the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000 and its rules.</p>}
       sections={[
         { id: "roles", title: "1. Who is responsible for your data", body: <>
           <p><b>Website visitors, demo requests and customer accounts:</b> we decide how this data is used and are the Data Fiduciary.</p>

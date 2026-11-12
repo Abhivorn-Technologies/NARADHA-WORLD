@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `${site.name} is built by ${site.company.legalName} to help businesses answer every lead quickly, in the language their customers speak.`,
+  description: `${site.name} is a product of ${site.company.legalName}, built to help businesses answer every lead quickly, in the language their customers speak.`,
   alternates: { canonical: "/about" },
 };
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
               We started with businesses in Hyderabad and the Telugu states, where customers often write in Telugu or in Telugu with English letters, and many prefer a phone call to a form. That is why the product replies in the customer&apos;s own style on WhatsApp and calls in natural Telugu.
             </p>
             <p>
-              {site.name} is built and operated by {c.legalName}{c.city ? `, ${c.city}` : ""}.
+              {site.name} is a product of {c.legalName}{c.city ? `, ${c.city}` : ""}. {c.legalName} designs, develops, hosts, supports and maintains it, and is the company you contract with when you subscribe.
             </p>
           </div>
           <aside className="space-y-4 rounded-xl border border-line bg-mist p-6">

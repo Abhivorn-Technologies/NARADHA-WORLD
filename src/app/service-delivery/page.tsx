@@ -8,7 +8,7 @@ export default function ServiceDeliveryPage() {
   return (
     <LegalPage
       title="Service Delivery Policy"
-      intro={<p>{site.name} is an online software service. Nothing is shipped physically.</p>}
+      intro={<p>{site.name} is an online software service provided by {site.company.legalName}. Nothing is shipped physically.</p>}
       sections={[
         { id: "access", title: "1. Access", body: <ul>
           <li>Your account is available immediately after sign-up.</li>

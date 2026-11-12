@@ -10,6 +10,7 @@ export default function Footer() {
       <div className="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="max-w-sm space-y-4">
           <Logo inverted />
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-saffron">A product of {c.legalName}</p>
           <p className="text-[15px] leading-relaxed text-white/70">
             WhatsApp replies, guided flows and Telugu AI calls that answer every lead and book the visit.
           </p>
@@ -41,7 +42,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col gap-2 py-5 text-sm text-white/55 sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} {c.legalName}. {site.name} is a product of {c.legalName}.</p>
+          <p>© {new Date().getFullYear()} {c.legalName}. {site.name} is a product of {c.legalName}, which develops, operates and maintains it.</p>
           {c.gstin && <p>GSTIN {c.gstin}</p>}
         </div>
       </div>

@@ -10,7 +10,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms of Service"
-      intro={<p>These terms are an agreement between {c.legalName} (&ldquo;we&rdquo;) and the business that signs up for {site.name} (&ldquo;you&rdquo;). By creating an account or using the service, you accept them on behalf of your business.</p>}
+      intro={<p>{site.name} is a product of {c.legalName}, which develops, operates and maintains it. These terms are an agreement between {c.legalName} (&ldquo;we&rdquo;) and the business that signs up for {site.name} (&ldquo;you&rdquo;). By creating an account or using the service, you accept them on behalf of your business.</p>}
       sections={[
         { id: "service", title: "1. The service", body: <p>{site.name} is a software service that receives leads, sends WhatsApp messages, runs guided conversation flows, generates AI replies, places AI phone calls, manages bookings and shows reports. Features available to you depend on your plan.</p> },
         { id: "account", title: "2. Your account", body: <ul>
